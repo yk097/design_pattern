@@ -18,3 +18,12 @@ display5.show
 
 display6 = Display::UpdownBorder.new(display1, char: '=')
 display6.show
+
+display7 = Display::MultiStringDisplay.new
+display7.add('おはよう')
+display7.add('こんにちわ')
+display7.add('おやすみなさい、また明日。')
+display7.show
+
+display8 = Display::FullBorder.new(display7)
+display8.show
