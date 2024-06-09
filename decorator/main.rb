@@ -15,3 +15,6 @@ display4.show
 
 display5 = Display::FullBorder.new(display4)
 display5.show
+
+display6 = Display::UpdownBorder.new(display1, char: '=')
+display6.show
