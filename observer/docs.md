@@ -21,3 +21,25 @@ ObserverパターンはPush型
 * Publisher<br>
 監視する側<br>
 Subscriberからの通知を受け取ったら必要な処理を行う
+
+## ポイント
+状態の変化をpushする際、引数にPublisher自身を渡すとSubscriber側で扱いやすそう
+```ruby:publisher.rb
+class Publisher
+  attr_reader :subscribers, :data
+
+  def push
+    subscribers.each do |sub|
+      sub.push(self)
+    end
+  end
+end
+```
+```ruby:subscriber.rb
+class Subscriber
+  def push(pub)
+    #Publisherを通じて必要なデータを取得する
+    pub.data
+  end
+end
+```
