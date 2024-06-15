@@ -1,0 +1,1 @@
+class CompositeError < StandardError;end
