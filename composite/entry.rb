@@ -15,6 +15,14 @@ class Entry
     raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
   end
 
+  def parent
+    raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+  end
+
+  def full_path
+    parent ? "#{parent.full_path}/#{name}" : "/#{name}"
+  end
+
   def to_s
     "#{name}(#{size})"
   end

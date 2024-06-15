@@ -1,9 +1,10 @@
 class DirectoryEntry < Entry
-  attr_accessor :name, :directories
+  attr_accessor :name, :directories, :parent
 
   def initialize(name)
     @name = name
     @directories = []
+    @parent = nil
   end
 
   def size
@@ -12,6 +13,7 @@ class DirectoryEntry < Entry
 
   def add(entry)
     directories << entry
+    entry.parent = self
   end
 
   def path(prefix = '')

@@ -36,3 +36,6 @@ tomura_dir.add(game_file)
 tomura_dir.add(junk_file)
 
 root_dir.path
+
+# 任意のファイルのフルパス
+puts memo_file.full_path
