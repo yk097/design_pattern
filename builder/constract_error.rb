@@ -1,0 +1,1 @@
+class ConstractError < StandardError; end

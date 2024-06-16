@@ -7,7 +7,7 @@ module Builder
       @file = File.new(filename, 'w')
     end
 
-    def make_title(title)
+    def build_title(title)
       html =<<~HTML
         <html>
           <head>
@@ -18,11 +18,11 @@ module Builder
       file.write(html)
     end
 
-    def make_string(string)
+    def build_string(string)
       file.write("<p>#{string}</p>\n")
     end
 
-    def make_items(items)
+    def build_items(items)
       html =<<~HTML
         <ul>
         #{items.map { |item| "\s\s<li>#{item}</li>" }.join("\n")}
@@ -31,7 +31,7 @@ module Builder
       file.write(html)
     end
 
-    def close
+    def build_close
       html =<<~HTML
           </body>
         </html>
