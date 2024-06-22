@@ -2,8 +2,8 @@ module Support
   class LimitSupport < Abstract
     attr_reader :limit
 
-    def initialize(name:, limit:, next_support: nil)
-      super(name:, next_support:)
+    def initialize(name:, limit:)
+      super(name:)
       @limit = limit
     end
 
