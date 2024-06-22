@@ -1,25 +1,24 @@
 module Support
   class Abstract
-    attr_reader :name
-    attr_accessor :next_support
+    attr_reader :name, :chain
 
-    def initialize(name:, next_support: nil)
+    def initialize(name:)
       @name = name
-      @next_support = next_support
+      @chain = Chain.new
     end
 
     def support(trouble)
       if (resolve(trouble))
         done(trouble)
-      elsif (has_next)
+      elsif (next_support)
         next_support.support(trouble)
       else
         fail(trouble)
       end
     end
 
-    def has_next
-      !!next_support
+    def next_support
+      @chain.next(self)
     end
 
     def resolve(trouble)
@@ -31,7 +30,7 @@ module Support
     end
 
     def fail(trouble)
-      puts "id:#{trouble.number} cannot be resolved by #{name}."
+      puts "id:#{trouble.number} cannot be resolved"
     end
   end
 end
