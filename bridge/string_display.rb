@@ -1,8 +1,8 @@
-class StringDisplay < AbstractDisplay
+class StringDisplay
+  include AbstractDisplay
   attr_reader :string
 
   def initialize(string)
-    super()
     @string = string
   end
 

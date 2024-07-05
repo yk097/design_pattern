@@ -1,4 +1,4 @@
-class AbstractDisplay
+module AbstractDisplay
   def open
     raise NotImplementedError, "You must implement #{self.class}##{__method__}"
   end
