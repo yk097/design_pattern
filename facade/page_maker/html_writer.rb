@@ -7,7 +7,7 @@ module PageMaker
     end
 
     def title(title)
-      str=<<~EOS
+      str = <<~EOS
         <html>
           <head>
             <title>#{title}</title>
@@ -19,7 +19,7 @@ module PageMaker
     end
 
     def paragraph(msg)
-      para=<<~EOS
+      para = <<~EOS
         <p>#{msg}</p>
       EOS
       writer.write(para)
