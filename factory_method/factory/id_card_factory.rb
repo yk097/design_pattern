@@ -1,6 +1,5 @@
 module Factory
   class IdCardFactory < Abstract
-
     attr_accessor :owners
 
     def initialize
