@@ -22,4 +22,3 @@ module Display
     end
   end
 end
-
