@@ -8,7 +8,7 @@ module Builder
     end
 
     def build_title(title)
-      html =<<~HTML
+      html = <<~HTML
         <html>
           <head>
             <title>#{title}</title>
@@ -23,7 +23,7 @@ module Builder
     end
 
     def build_items(items)
-      html =<<~HTML
+      html = <<~HTML
         <ul>
         #{items.map { |item| "\s\s<li>#{item}</li>" }.join("\n")}
         </ul>
@@ -32,7 +32,7 @@ module Builder
     end
 
     def build_close
-      html =<<~HTML
+      html = <<~HTML
           </body>
         </html>
       HTML

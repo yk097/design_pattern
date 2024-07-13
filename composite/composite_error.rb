@@ -1,1 +1,1 @@
-class CompositeError < StandardError;end
+class CompositeError < StandardError; end
