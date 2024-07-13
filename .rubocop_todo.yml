@@ -33,13 +33,6 @@ Lint/MissingSuper:
     - 'visitor/entry/file.rb'
     - 'visitor/visitor/list.rb'
 
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-Lint/RedundantStringCoercion:
-  Exclude:
-    - 'composite/directory_entry.rb'
-    - 'composite/file_entry.rb'
-
 # Offense count: 12
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AutoCorrect, AllowUnusedKeywordArguments, IgnoreEmptyMethods, IgnoreNotImplementedMethods.

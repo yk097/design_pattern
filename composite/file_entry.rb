@@ -8,6 +8,6 @@ class FileEntry < Entry
   end
 
   def path(prefix = "")
-    puts "#{prefix}/#{to_s}"
+    puts "#{prefix}/#{self}"
   end
 end

@@ -17,7 +17,7 @@ class DirectoryEntry < Entry
   end
 
   def path(prefix = '')
-    puts "#{prefix}/#{to_s}"
+    puts "#{prefix}/#{self}"
     directories.each { |entry| entry.path("#{prefix}/#{name}") }
   end
 end
