@@ -1,1 +1,3 @@
-class Errors::NotExistError < StandardError; end
+module Errors
+  class NotExistError < ::StandardError; end
+end

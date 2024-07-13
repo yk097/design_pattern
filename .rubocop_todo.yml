@@ -57,15 +57,6 @@ Naming/AccessorMethodName:
     - 'decorator/display/string_display.rb'
     - 'decorator/display/updown_border.rb'
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Exclude:
-    - 'chain_of_responsibility/errors/not_exist_error.rb'
-    - 'observer/generator/random_number_generator.rb'
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowedMethods, AllowedPatterns.
