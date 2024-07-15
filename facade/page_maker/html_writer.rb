@@ -7,21 +7,21 @@ module PageMaker
     end
 
     def title(title)
-      str = <<~EOS
+      str = <<~HTML
         <html>
           <head>
             <title>#{title}</title>
           </head>
           <body>
             <h1>#{title}</h1>
-      EOS
+      HTML
       writer.write(str)
     end
 
     def paragraph(msg)
-      para = <<~EOS
+      para = <<~HTML
         <p>#{msg}</p>
-      EOS
+      HTML
       writer.write(para)
     end
 
