@@ -57,14 +57,6 @@ Naming/AccessorMethodName:
     - 'decorator/display/string_display.rb'
     - 'decorator/display/updown_border.rb'
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-# AllowedMethods: ==, equal?, eql?
-Style/ClassEqualityComparison:
-  Exclude:
-    - 'chain_of_responsibility/chain.rb'
-
 # Offense count: 44
 # Configuration parameters: AllowedConstants.
 Style/Documentation:

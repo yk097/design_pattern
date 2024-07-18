@@ -10,7 +10,7 @@ class Chain
   end
 
   def next(supporter)
-    index = chain.find_index { |s| s.class == supporter.class }
+    index = chain.find_index { |s| s.instance_of?(supporter.class) }
 
     if index.nil?
       raise Errors::NotExistError, "#{klass} is not exist in the chain"
