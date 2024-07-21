@@ -10,27 +10,21 @@ module Builder
     end
 
     def make_string(string)
-      if @has_title
-        build_string(string)
-      else
-        raise ConstractError.new("You must call make_title method first.")
-      end
+      raise ConstractError.new("You must call make_title method first.") unless @has_title
+
+      build_string(string)
     end
 
     def make_items(items)
-      if @has_title
-        build_items(items)
-      else
-        raise ConstractError.new("You must call make_title method first.")
-      end
+      raise ConstractError.new("You must call make_title method first.") unless @has_title
+
+      build_items(items)
     end
 
     def close
-      if @has_title
-        build_close
-      else
-        raise ConstractError.new("You must call make_title method first.")
-      end
+      raise ConstractError.new("You must call make_title method first.") unless @has_title
+
+      build_close
     end
 
     def build_title(title)
